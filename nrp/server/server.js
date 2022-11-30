@@ -54,13 +54,14 @@ app.get("/", (req, res) => {
   res.send("HELLO");
 });
 app.post("/autoLogin", (req, res) => {
+  console.log(req.session);
   res.send(req.session.loginUser);
 });
 
 /** 로그인
  * 입력값 체크
  * 세션에 저장
- * */
+ */
 app.post("/login", async (req, res) => {
   const { id, pw } = req.body;
   console.log(req.body);
@@ -90,8 +91,9 @@ app.post("/login", async (req, res) => {
     return;
   }
 
-  req.session.lgoinuser = user[0];
+  req.session.loginUser = user[0];
   req.session.save();
+  console.log(req.session.loginUser);
   res.send(result);
 });
 
