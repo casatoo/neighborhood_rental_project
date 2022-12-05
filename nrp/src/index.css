@@ -19,17 +19,22 @@ a {
   justify-content: space-around;
   align-items: center;
   position: fixed;
-  z-index: 1000;
+  z-index: 100;
 }
 .menu-tap {
   display: flex;
   font-size: 1.5rem;
   color: #6e6e6e;
+  width: 132px;
+  justify-content: center;
 }
 .main-icon {
   font-weight: bold;
   font-size: 2.5rem;
   color: #d953e6;
+}
+.user-nav {
+  width: 132px;
 }
 .user-nav > div {
   display: inline-block;
@@ -92,4 +97,48 @@ input:focus {
 }
 .find-password-btn {
   font-size: 15px;
+}
+
+/** side-bar */
+.side-bar {
+  background-color: white;
+  width: 400px;
+  height: 100vh;
+  position: absolute;
+  font-size: 1.3rem;
+  z-index: 300;
+  left: -400px;
+}
+.side-bar-nav {
+  margin: 10px;
+}
+.side-bar-nav-top {
+  display: flex;
+  justify-content: space-between;
+}
+.side-bar-nav-search {
+  margin: 20px 0;
+}
+.side-bar-nav-search > input {
+  height: 35px;
+  width: 350px;
+}
+.side-bar-nav-article > div {
+  margin: 20px 0;
+}
+.side-bar-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 200;
+  display: none;
+}
+
+/** 메인 페이지 */
+.main-img-box > img {
+  height: 316px;
+  width: auto;
 }

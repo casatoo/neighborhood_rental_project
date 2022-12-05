@@ -54,7 +54,6 @@ app.get("/", (req, res) => {
   res.send("HELLO");
 });
 app.post("/autoLogin", (req, res) => {
-  console.log(req.session);
   res.send(req.session.loginUser);
 });
 

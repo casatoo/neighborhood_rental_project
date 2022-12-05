@@ -32,10 +32,14 @@ function Header() {
     <header className="header-bar">
       <div className="menu-tap">
         <div>
-          <FontAwesomeIcon icon={faBars} />
+          <div>
+            <FontAwesomeIcon icon={faBars} />
+          </div>
         </div>
       </div>
-      <div className="main-icon">SHARE ONE</div>
+      <a href="http://localhost:3000">
+        <div className="main-icon">SHARE ONE</div>
+      </a>
       <div className="user-nav">
         <div>
           <FontAwesomeIcon icon={faMagnifyingGlass} />
@@ -44,10 +48,49 @@ function Header() {
           <FontAwesomeIcon icon={faCartShopping} />
         </div>
         <div>
-          <FontAwesomeIcon icon={faUser} />
+          <a href="http://localhost:3000/login">
+            <FontAwesomeIcon icon={faUser} />
+          </a>
         </div>
       </div>
     </header>
+  );
+}
+
+function SideBar() {
+  return (
+    <div className="side-bar-bg">
+      <div className="side-bar">
+        <div className="side-bar-nav">
+          <div className="side-bar-nav-top">
+            <div className="main-icon">SHARE ONE</div>
+            <a href="http://localhost:3000/login">
+              <FontAwesomeIcon icon={faUser} />
+            </a>
+          </div>
+          <div className="side-bar-nav-search">
+            <input type="text" />
+          </div>
+          <div className="side-bar-nav-article">
+            <div>
+              <a href="http://localhost:3000/article/notice">공지사항</a>
+            </div>
+            <div>
+              <a href="http://localhost:3000/article/free">자유 게시판</a>
+            </div>
+            <div>
+              <a href="http://localhost:3000/article/rental1">빌려줄게요</a>
+            </div>
+            <div>
+              <a href="http://localhost:3000/article/rental2">빌려주세요</a>
+            </div>
+            <div>
+              <a href="http://localhost:3000/article/review">후기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -81,6 +124,7 @@ function App() {
       }}
     >
       <Header />
+      <SideBar />
       <Routes>
         <Route exact path="/" element={<Main />} />
         <Route exact path="/join" element={<Join />} />

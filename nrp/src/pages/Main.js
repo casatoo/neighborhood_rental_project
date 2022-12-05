@@ -13,7 +13,14 @@ function Main() {
 
   console.log(loginUser);
 
-  return <div>안녕하세요 {loginUser.name}님</div>;
+  return (
+    <div class="main-img-box">
+      <img
+        src="https://contents.sixshop.com/thumbnails/uploadedFiles/16843/default/image_1662535772690_2500.png"
+        alt=""
+      />
+    </div>
+  );
 }
 
 export default Main;
