@@ -15,10 +15,7 @@ function Main() {
 
   return (
     <div class="main-img-box">
-      <img
-        src="https://contents.sixshop.com/thumbnails/uploadedFiles/16843/default/image_1662535772690_2500.png"
-        alt=""
-      />
+      <img className="main-img" src="https://contents.sixshop.com/thumbnails/uploadedFiles/16843/default/image_1662535760275_2500.png" alt="" />
     </div>
   );
 }
