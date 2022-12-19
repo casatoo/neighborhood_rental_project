@@ -12,6 +12,7 @@ a {
 }
 /** 해더 */
 .header-bar {
+  background-color: white;
   height: 80px;
   width: 100%;
   min-width: 750px;
@@ -138,7 +139,26 @@ input:focus {
 }
 
 /** 메인 페이지 */
+.main-img-box{
+display: flex;
+justify-content: center;
+background-color: #30CEE6;
+}
 .main-img-box > img {
-  height: 316px;
-  width: auto;
+  margin-top: 80px;
+  height: 300px;
+}
+.icon-boxes{
+	display:flex;
+	justify-content:space-around;
+}
+.icon-box{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	margin: 0 10px;
+}
+.icon{
+	border-radius:50%;
+	width:150px;
 }
